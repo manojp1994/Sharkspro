@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+     <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!--Bootstrap jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+    <!--Bootstrap javascript-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <title>Sharkspro</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+
+    <style type="text/css">
+      .social:hover {
+     -webkit-transform: scale(1.1);
+     -moz-transform: scale(1.1);
+     -o-transform: scale(1.1);
+ }
+ .social {
+     -webkit-transform: scale(0.8);
+     /* Browser Variations: */
+     
+     -moz-transform: scale(0.8);
+     -o-transform: scale(0.8);
+     -webkit-transition-duration: 0.5s;
+     -moz-transition-duration: 0.5s;
+     -o-transition-duration: 0.5s;
+ }
+
+/*
+    Multicoloured Hover Variations
+*/
+ 
+ #social-fb:hover {
+     color: #3B5998;
+ }
+ #social-tw:hover {
+     color: #4099FF;
+ }
+ #social-gp:hover {
+     color: #d34836;
+ }
+ #social-em:hover {
+     color: #f39c12;
+ }
+ .background1 {
+    background-image: url('{% static 'images/swimming2.jpeg' %}');
+ }
+
+ .rating {
+    float:left;
+}
+
+/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
+   follow these rules. Every browser that supports :checked also supports :not(), so
+   it doesn’t make the test unnecessarily selective */
+.rating:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+    clip:rect(0,0,0,0);
+}
+
+.rating:not(:checked) > label {
+    float:right;
+    width:1em;
+    padding:0 .1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:200%;
+    line-height:1.2;
+    color:#ddd;
+    text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:before {
+    content: '★ ';
+}
+
+.rating > input:checked ~ label {
+    color: #f70;
+    text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: gold;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: #ea0;
+    text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5);
+}
+
+.rating > label:active {
+    position:relative;
+    top:2px;
+    left:2px;
+}
+    </style>
+  </head><br>
+<!-- NAVBAR
+================================================== -->
+<div align='center' style="margin-left:850px;"><a href='http://www.hit-counts.com'><img src='http://www.hit-counts.com/counter.php?t=MTQxMTExOA==' border='0' alt='Web Counter'></a><BR><a href='http://www.hit-counts.com'></a><!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<a href="https://www.pixelmeta.com/link-builder.php?GA-UA7857Srxv=183.82.210.24"></a>
+</div>
+  <body background="{% static "images/swimming38.jpg" %}">
+    <!-- logo -->
+    <div style="margin-left:70px; margin-top:-20px;">
+    <div class="w3-container">
+    <div class="w3-card-4 w3-center" style="width:90%">
+    <img src="{% static "images/logo.png" %}" alt="logo" width="85" height="55">
+    <!-- <a href="/swimming/"><img src="{% static "images/logo.png" %}" alt="logo" width="65" height="55"> -->
+  </div>
+</div>
+</div><br><br>
+
+    <div class="navbar-wrapper">
+      <div class="container">
+        <div class="background1">
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <!-- <a href="/sharkspro/"><img src="{% static "static/swimming1.jpeg" %}" alt=" logo" width="175" height="175"> -->
+              <!-- <a class="navbar-brand" href="/swimming/home">Sharkspro</a> -->
+              <!-- <img src="{% static "images/swimming10.jpg" %}" alt="first" width="250" height="250"> -->
+            </div>
+            <div class="col-sm-10">
+            <div id="navbar" class="navbar-collapse collapse" >
+              <ul class="nav navbar-nav">
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<li><a href="/swimming/home"><b>Home</b></a></li>
+                <li><a href="/swimming/about" target="_blank"><b>About</b></a></li>
+                <li><a href="/swimming/accomplishments" target="_blank"><b>Accomplishments</b></a></li>
+                <li><a href="/swimming/safetymeasures" target="_blank"><b>Safety Measures</b></a></li>
+                <li><a href="/swimming/gallery" target="_blank"><b>Gallery</b></a></li>
+                <!-- <li><a href="/swimming/contact" target="_blank">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<b>Contact us</b></a></li> -->
+                <li><a href="/swimming/contact" target="_blank"><b>Contact</b></a></li>
+              </ul>
+            </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    </div>
+
+    <!--  -->
+
+    <center>
+    <div class="w3-container">
+    <div class="w3-card-4 w3-center" style="width:90%">
+    <img src="{% static "images/swimming11.jpg" %}" alt="Norway" height="600" width="1000" >
+    <div class="w3-container w3-center">
+      <p><h2><center><marquee>Swimming is simply moving meditation.</marquee></center></h2></p>
+    </div>
+  </div>
+</div>
+</center>
+
+
+    <!-- Carousel
+    ================================================== -->
+  <div class="container">  
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width: 250px; margin-left: 30px; height:160px; margin-top:25px;">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+      <li data-target="#myCarousel" data-slide-to="5"></li>
+      <li data-target="#myCarousel" data-slide-to="6"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="{% static "images/swimming10.jpg" %}" alt="first" width="250" height="250">
+      </div>
+
+      <div class="item">
+        <img src="{% static "images/swimming11.jpg" %}" alt="second" width="250" height="250">
+      </div>
+    
+      <div class="item">
+        <img src="{% static "images/swimming12.jpg" %}" alt="third" width="250" height="250">
+      </div>
+
+      <div class="item">
+        <img src="{% static "images/swimming24.jpg" %}" alt="fourth" width="250" height="250">
+      </div>
+
+      <div class="item">
+        <img src="{% static "images/swimming20.jpg" %}" alt="fifth" width="250" height="250">
+      </div>
+
+      <div class="item">
+        <img src="{% static "images/swimming28.jpg" %}" alt="sixth" width="250" height="250">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+<br><br>
+
+  <!-- reviews -->
+  <!-- <div class="w3-card-4">
+        <div class="w3-container w3-center">
+            <div class="container" style="margin-left:550px; margin-top:-95px;">
+                  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Post & view reviews</button>
+                    <div id="demo" class="collapse">
+                        <div class="w3-card-4" style="width:50%;">
+      <div class="w3-container">
+         <fieldset class="rating">
+                <legend>Please rate:</legend>
+                <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+            </fieldset><br><br><br><br>
+        <form role="form" action="/swimming/reviews/" method ="POST">
+          {% csrf_token %}
+            <p align="center">
+              <h3><b>Name   <input type = "text" name = "PostedName" id = "PostedName" class="form-control" style="width:50%" required="required"></h3></b><br><br>
+              <h3><b>Mobile   <input type = "text" name = "PostedMobile" id = "PostedMobile" class="form-control" style="width:50%" required="required"></h3></b><br><br>
+              <h3><b>Review   <input type = "text" name = "PostedReview" id = "PostedReview" class="form-control" style="width:50%" required="required"></h3></b><br><br>      
+              &emsp;&emsp;<button type="submit" class="btn btn-default btn-xl">Submit</button>&emsp;
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>   -->
+
+    
+
+  <!-- cover -->
+<div style="width: 250px; margin-left: 950px; height:160px; margin-top:-235px;">
+       <h3>Happenings</h3>
+      </div>
+    
+  <div class="container">  
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width: 250px; margin-left: 830px; height:160px; margin-top:-120px;">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="{% static "images/swimming8.jfif" %}" alt="first" width="250" height="250">
+      </div>
+
+      <div class="item">
+        <img src="{% static "images/swimming21.jpg" %}" alt="second" width="250" height="300">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+<br><br>
+
+      <br><br><br>
+    
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+      <!-- features of pool -->
+    <div class="w3-container" style="margin-left:90px;">
+    
+      <h1><strong><center>FEATUREATES</center></strong></h1><br><br><br><br><br><br>
+    
+        <div class="w3-display-container w3-hover-opacity" style="width:50%">
+          <img src="{% static "images/swimming59.jpg" %}" alt="roof" height="210" width="240">
+            <div class="w3-display-middle w3-display-hover w3-xlarge"><br>
+              <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo1"><b>Roof Top Convertible</b></button>
+                    <div id="demo1" class="collapse">
+                      <h3><b>Roof-Top</b></h3>
+                      <p>Whether you want to exercise, have a leisurely dip or lounge in the sun, our rooftop 25-feet pool helps you make the most of it. It’s the perfect location to unwind after a long day, with spectacular views of sky and feel the cool breeze of atmosphere.
+                      For your safety, fully trained lifeguards are on duty from 06:00 to 22:00. All lifeguards at Sharkspro are trained under the internationally recognised trainers & Associates risk management programme.</p>
+                    </div>
+            </div>
+        </div>
+    </div><br><br><br><br>
+
+      <!-- second feature -->
+        <div class="w3-container" style="margin-left:830px;">
+            <div class="w3-display-container w3-hover-opacity" style="width:50%">
+              <img src="{% static "images/swimming39.jpg" %}" alt="Swim" height="210" width="240">
+                <div class="w3-display-middle w3-display-hover w3-xlarge"><br>
+                  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo2"><b>Swimming Accesories</b></button>
+                    <div id="demo2" class="collapse">
+                      <h3><b>Swimsuit</b></h3>
+                      <p>The suit covers the skin for modesty. Competitive swimwear seeks to improve upon bare human skin for a speed advantage. In 2009, FINA rules and regulations were altered and suits made with polyurethane were banned because they made athletes more buoyant. These rules also banned suits which go above the navel or below the knee for men and suits which extend past the shoulders or cover the neck for women.From curvier frames to athletic body types, we're helping to make sense of the endless swimwear options and narrowing them down to the picks that were made to fit and flatter your frame. </p>
+                      <h3><b>Swim cap</b></h3>
+                      <p>A swim cap (a.k.a. cap) keeps the swimmer's hair out of the way to reduce drag. Caps may be made of latex, silicone, spandex or lycra. </p>
+                      <h3><b>Goggles</b></h3>
+                      <p>Goggles keep water and chlorine out of swimmers' eyes. Goggles may be tinted to counteract glare at outdoor pools. Prescription goggles may be used by swimmers who wear corrective lenses.</p>
+                      <h3><b>Swim Fins</b></h3>
+                      <p>Rubber fins are used to help kick faster and build strength and technique, but are illegal in a race. They also improve technique by keeping the feet in the proper position while kicking.</p>
+                      <h3><b>Drag suit</b></h3>
+                      <p>Swimmers use drag suits in training to increase resistance. This allows a swimmer to be challenged even more when practicing. Drag suits are not used in competitive races.</p>
+                      <h3><b>Kickboard</b></h3>
+                      <p>A kickboard is a foam board that swimmers use to support the weight of the upper body while they focus on kicking; helps build leg muscles. (Is usually used during practice)</p>
+                       <h3><b>Pull buoy</b></h3>
+                      <p>Often used at the same time as hand paddles, pull buoys support swimmers' legs (and prevents them from kicking) while they focus on pulling. Pull buoys are made of foam so they float in the water. Swimmers hold them in between the thighs. They can also be used as a kickboard to make kicking a little harder.</p>
+                    </div>
+                </div>
+            </div>
+        </div><br><br><br><br>
+
+        <!-- thirdd feature -->
+        <div class="w3-container" style="margin-left:90px;">
+            <div class="w3-display-container w3-hover-opacity" style="width:50%">
+              <img src="{% static "images/swimming15.jpg" %}" alt="roof" height="210" width="240">
+                <div class="w3-display-middle w3-display-hover w3-xlarge"><br>
+                  <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo3"><b>Personal Coaching</b></button>
+                    <div id="demo3" class="collapse">
+                      <h3><b>Fresh and Fruity...</b></h3>
+                      <p>Our coaching, products and training programs are fun, funky, inspirational and to the point - keeping your swimming fresh and fruity! Sometimes we're a bit angry too. Sorry Mum.</p>
+                      <h3><b>For Individuals...</b></h3>
+                      <p>We don't coach a 'One Way Only' approach to swimming. Your ideal stroke is different from another person's. We identify your individual needs and how best to improve your swimming. Whatever your experience. Whatever your skill level. Whatever your body type.</p>
+                      <h3><b>Technique AND Training...</b></h3>
+                      <p>We believe that technique stroke work is very important to your swim speed. But we also believe that most swimmers need to include fitness training to improve. Why? It's a harsh reality. If you only work on technique you'll improve some but then plateau. The swimmers who keep improving and become faster and faster strike the right balance of fitness and technique training.</p>
+                    </div>
+                </div>
+            </div>
+        </div><br><br><br><br>
+
+      <!-- social buttons -->
+        <div class="container" style="margin-left:-650px; margin-top:5px;">
+        <div class="text-center center-block">
+                <a href="https://www.facebook.com/sharksproindia/" target="_blank"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+              <a href="https://instagram.com/bootsnipp"><i id="social-tw" class="fa fa-instagram-square fa-3x social"></i></a>
+              <a href="https://plus.google.com/+Bootsnipp-page"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
+        </div>
+</div>
+      
+      <footer>
+        <!-- <div style="margin-left:-130%; margin-top:3%;"> -->
+        
+    <!-- </div> -->
+        <center><p>&copy; Site by &nbsp &nbsp &nbsp &nbsp<a href="https://www.linkedin.com/in/manoj-kumar-palaparti-71b13689/" target="_blank"><font color="black"><b>P Manoj Kumar</b></font></a></p></center> 
+      </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

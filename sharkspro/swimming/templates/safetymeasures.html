@@ -1,0 +1,205 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+     <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!--Bootstrap jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+    <!--Bootstrap javascript-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <title>Sharkspro</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+
+    <style type="text/css">
+      .form-inline .form-group { margin-right:30px; }
+      .well-primary {
+        color: rgb(255, 255, 255);
+        background-color: rgb(66, 139, 202);
+        border-color: rgb(53, 126, 189);
+      }
+      .glyphicon { margin-right:15px; }
+    </style>
+</head><br><br>
+<body background="{% static "images/swimming38.jpg" %}">
+<div class="container">
+
+  <div class="row">
+    
+    <div class="col-md-10">
+
+      <div class="panel-group" id="accordion">
+		
+        <div class="panel panel-default">
+			
+          <div class="panel-heading">
+            <h2 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><h2>Safety measures</h1></a> </h1><br>
+          			<img class="headshottitle" src="{% static "images/swimming1.jpeg" %}" alt="first" width="200" height="200"/>
+		      </div>  
+          <div id="collapseOne" class="panel-collapse collapse in">
+            <div class="panel-body">
+                <div class="row">
+                  <div class="col-xs-3 bold"><b>sharkspro coach & guide</b></div>
+                  <div class="col-xs-3"><b>Suresh</b></div>
+                  <div class="col-xs-3 bold">15 years of experience</div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-3 bold"><b>sharkspro coach & guide</b></div>
+                  <div class="col-xs-3"><b>Vishal</b></div>
+                  <div class="col-xs-3 bold">12 years of experience</div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-3 bold"><b>sharkspro management</b></div>
+                  <div class="col-xs-3"><b>vishali</b></div>
+                  <div class="col-xs-3 bold">10 years of experience</div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-th-list"> </span>Health and safety law for swimming pools</a> </h4>
+          </div>
+          <div id="collapseTwo" class="panel-collapse collapse">
+            <div class="panel-body">
+                <div class="row" style="margin-left:10px;">
+                  <p>There are no swimming pool specific health and safety laws. However, swimming pool operators must comply with their general duties under the Health and Safety at Work etc Act 1974 and the associated regulations.</p>
+                </div>
+                <div class="row" style="margin-left:10px;">
+                  <p>Operators must make a suitable and sufficient assessment of the health and safety risks to workers and users to help decide what they must do to make their pool safe. This is known as risk assessment</p>
+                </div>
+                <div class="row" style="margin-left:10px;">
+                  <p>The law does not state what safety measures an operator must put in place.  Such judgements must be made by each operator, based on the particular risks in their pool. More information on the law, your duties as a swimming pool operator and conducting a risk assessment are detailed in: Managing health and safety in swimming pools.</p>
+                </div>
+                <div class="row" style="margin-left:10px;">
+                  <p>
+                    <b>Swimming Rules</b><br>
+                      Always swim with a buddy.
+                      Swim only in areas that have a lifeguard.
+                      Stay out of the water when you are very tired, very cold, or overheated.
+                      Follow all swimming rules posted at the swimming area.
+                      Obey the lifeguard’s instruction.
+                      If you can’t see the bottom of the pool in the deep end or the water is cloudy, don’t swim there.
+                      Avoid swimming at night in unlighted areas.
+                      Don’t chew gum or eat while swimming, you could choke.
+                      Do not push, shove, or run near the water, horseplay can be dangerous.
+                      Get out of the water if you see lightning or hear thunder.
+                      Swim a safe distance away from diving boards and slides. Never swim under them.
+                      Never swim near a dam or boat ramp.
+                      Avoid swimming in river currents.
+                      Rules for Pool Slides
+                      Slides should be at the deep end of the pools so that the entry is into water least eight feet and away from diving areas.
+                      Go down feet first in a sitting position. (Going down headfirst is dangerous-you could injure your head, neck, or back.)<br><br>
+
+                    <b>Rules for the Beach</b><br>
+                      Know where the nearest lifeguard stand is.
+                      Be sure you know the surf conditions before you enter the water.
+                      Check for warning flags.
+                      Observe danger signs.
+                      Swim well away from piers, pilings, and diving platforms.
+                      Be on the lookout for dangerous marine life
+                      If you swim out from shore, remember you have to swim back.
+                      If you are caught in a current, don’t try to fight it or swim against it. You can make it back to shore by swimming gradually away from it.
+                      Don’t let any one pressure you into a dangerous stunt.<br><br>
+                    <b>Rules for Water Park Slides, Flumes and Wave Pools</b><br>
+                      Be sure all areas have a lifeguard.
+                      Position yourself carefully before you start down.
+                      Don’t get pressured into a stunt.
+                      In a wave pool be sure you know how deep the water will be when the wave pool is turned on.
+                  </p>
+                </div>
+              </div>
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><span class="glyphicon glyphicon-th-list"> </span>How can Public Pools Reduce Risk?</a> </h4>
+          </div>
+          <div id="collapseThree" class="panel-collapse collapse">
+            <div class="panel-body">
+              <div class="row" style="margin-left:10px;">
+                  <p>
+                    <b>Waivers</b><br>Technically, public-use pools usually aren’t required to make patrons sign a waiver, but it is not uncommon for swimmers to have to fill one out before using a pool. Sometimes waivers are only required if the facility features slides, diving boards, or other attractions are part of the facility. Residential owners could also use a waiver if they feel that doing so would mitigate liability.
+                  </p>
+                </div>
+                <div class="row" style="margin-left:10px;">
+                  <p>
+                    <b>Lifeguard</b><br>Surprisingly, some states do not require all public-use pools to have lifeguards on duty at all times. In some cases, whether a lifeguard is required depends on if the pool is administered by public funds or charges patrons directly. Alternatively, som laws state that if no lifeguard is on duty, warning signs and other safety devices (swimming pool pole of “x” length, etc.) must be present. (More on lifeguard signs in the section on state-by-state signage requirements below.) That said,most states do require that public pools have lifeguards on duty at all times to ensure swimmer safety.
+                  </p>
+                </div>
+                <div class="row" style="margin-left:10px;">
+                  <p>
+                    <b>Fencing</b><br>In almost all cases, public-use pools are required to have some kind of fencing around the pool. States, cities, and counties usually specify exactly what is required of these fences in terms of material, spacing, gates, locks, and more.
+                  </p>
+                </div>
+                <div class="row" style="margin-left:10px;">
+                  <p>
+                    <b>Swimming Ages and Pool Hours</b><br>Many states require public pools to post the ages at which children can swim without adult supervision. Likewise, public pools often must clearly state operating hours of the pool. These requirements vary state-by-state, as detailed below.
+                    Other safety considerations for public pools include maintaining the proper swimmer-lifeguard ratio, keeping emergency communication devices near the pool, and first aid kits and safety devices, properly trained and certified staff, etc. As with residential pools, safety precautions such as those described above may not completely eliminate the liability of the pool. They will, however, help prevent accidents, provide evidence that the pool has done everything in its power  to reduce dangers to patrons, and encourage insurance companies to extend coverage.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+                </div>
+            </div>
+          </div>
+        </div><br><br><br>
+
+          <footer>
+        <!-- <div style="margin-left:-130%; margin-top:3%;"> -->
+        
+    <!-- </div> -->
+        <center><p>&copy; Site by &nbsp &nbsp &nbsp &nbsp<a href="https://www.linkedin.com/in/manoj-kumar-palaparti-71b13689/" target="_blank"><font color="black"><b>P Manoj Kumar</b></font></a></p></center> 
+      </footer>
+</body>
+</html>
+        
+        
+              
+              
+              
+            
+              
+    
